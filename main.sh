@@ -28,8 +28,11 @@ source ./dependencyScripts/core/gnomeTheme.sh
 cp ./fonts/SF-Pro-Display-Regular.otf ~/.fonts/
 
 # Set up wallpapers
-echo "Adding the Gaurav's wallpaper.🏞";
-gsettings set org.gnome.desktop.background picture-uri "file://$(pwd)/wallpaper/wallpaper.jpg"
+# Wallpapers
+mkdir -p ~/Pictures/
+cp -r wallpaper/* ~/Pictures/
+gsettings set org.gnome.desktop.background picture-uri "file:///home/$user_name/Pictures/wallpaper.jpg"
+gsettings set org.gnome.desktop.background picture-uri-dark "file:///home/$user_name/Pictures/wallpaper.jpg"
 
 
 # Additional customizations and configurations can be added here
