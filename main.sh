@@ -28,7 +28,9 @@ source ./dependencyScripts/core/gnomeTheme.sh
 cp ./fonts/SF-Pro-Display-Regular.otf ~/.fonts/
 
 # Set up wallpapers
-cp ./wallpaper/wallpaper.jpg ~/Pictures/
+echo "Adding the Gaurav's wallpaper.🏞";
+gsettings set org.gnome.desktop.background picture-uri "file://$(pwd)/wallpaper/wallpaper.jpg"
+
 
 # Additional customizations and configurations can be added here
 
@@ -42,5 +44,5 @@ echo "Setting up SF-Pro fonts.";
 cp fonts/* ~/.local/share/fonts/
 
 
-echo "Hurry! you have configure your linux as Gaurav's now you be like him.";
+echo "Hurry!🎉 you have configure your linux as Gaurav's now you be like him.";
 source ./configs/backup-file.conf
